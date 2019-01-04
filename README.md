@@ -6,9 +6,29 @@ This React Native Application was made using expo. Running ```expo start``` in t
 The Project is kept on github at ```sheppardrs/Haters```.
 
 # Functionality
-The app is the interface to the measurement devices. It will present data about bed-wetting, time of sleep, time spent before falling asleep, and restlessness retrieved from the device or from the server. 
+This section currently describes the goals of the application and will be updated accordingly as progress is made and functionality is definitively added.
+The app is the interface to the measurement devices. It will present data about bed-wetting, time of sleep, time spent before falling asleep, and restlessness retrieved from the device or from the server.
 
-## Contributors
+## Server
+The app uses Google Firebase to store information collected by the device.
+### Fetching
+The app fetches the nightly data when it is opened for restlessness, bedwetting, and sleep time.
+### Pushing
+The server pushes alerts to the phone when an event like bedwetting occurs.
+### Aggregation
+The server aggregates data from the device to create nightly data points out of the minute level data.
+
+## Notifications
+The user can set notification preferences for events like bedwetting or staying awake for more than a certain amount of time.
+### Push Notifications
+In the morning to remind the user to check app.
+### Alarm/More disruptive notification
+For immediate attention alerts, as defined by the user, for events like bedwetting.
+
+## Information Presentation
+Present the data to the user in a useful and hopefully actionable manner. Present weekly (monthly?) graphs, avgs scores, aggregate score (?), and possibly recommendations (?). 
+
+# Contributors
 Group Members: Emily Chao, Daniel Choe, Lily Hanig, Rachel Martin, Sheppard Somers, and Cristian Vences
 Sponsor: JD Velilla
 Advisor: Geoffrey Luke
