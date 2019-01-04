@@ -26,7 +26,12 @@ In the morning to remind the user to check app.
 For immediate attention alerts, as defined by the user, for events like bedwetting.
 
 ## Information Presentation
-Present the data to the user in a useful and hopefully actionable manner. Present weekly (monthly?) graphs, avgs scores, aggregate score (?), and possibly recommendations (?). 
+Present the data to the user in a useful and hopefully actionable manner. Present weekly (monthly?) graphs, avgs scores, aggregate score (?), and possibly recommendations (?).
+
+# Possible Additions/Problems
+## Android google sign on
+See the firebase authentication settings -- "need to add a SHA1 fingerprint for each app on your project settings".
+
 
 # Contributors
 Group Members: Emily Chao, Daniel Choe, Lily Hanig, Rachel Martin, Sheppard Somers, and Cristian Vences
