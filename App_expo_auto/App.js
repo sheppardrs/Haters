@@ -1,21 +1,41 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import * as firebase from 'firebase';
-
+import { StyleSheet, Text, View, ListView } from 'react-native';
+import firebase from 'react-native-firebase';
 
 // import styles
 const styles = require('./styles.js')
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: "<your-api-key>",
-  authDomain: "<your-auth-domain>",
-  databaseURL: "<your-database-url>",
-  storageBucket: "<your-storage-bucket>",,
+   apiKey: "AIzaSyAei4RDqlxZcwdVsqPia-Tp040bsHBLIyI",
+   authDomain: "sleepdata-d5465.firebaseapp.com",
+   databaseURL: "https://sleepdata-d5465.firebaseio.com",
+   storageBucket: "sleepdata-d5465.appspot.com",
 };
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      dataSource: new ListView.DataSource({
+        rowHasChanged: (row1, row2) => row1 !== row2,
+      })
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      dataSource: this.state.dataSource.cloneWithRows([{ title: 'Pizza' }])
+    })
+  }
+
+  _renderItem(item){
+    return (
+      <ListItem item="{item}" onpress="{() ==> {}}" />
+    );
+  }
+
   render() {
     return (
       <View style={styles.container}>
